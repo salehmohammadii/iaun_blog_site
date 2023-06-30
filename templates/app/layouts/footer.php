@@ -29,9 +29,9 @@
                 </div>
             </div>
         <?php } ?>
-        <a href="<?= $parametrs['banners'][0]['url'] ?>">
+        <a href="<?= $parametrs['banners'][2]['url'] ?>">
             <div class="single-sidebar-widget ">
-                <img class="img-fluid" src="<?= assets($parametrs['banners'][0]['image']) ?>" alt="">
+                <img class="img-fluid" src="<?= assets($parametrs['banners'][2]['image']) ?>" alt="">
             </div>
         </a>
         <div class="single-sidebar-widget editors-pick-widget">

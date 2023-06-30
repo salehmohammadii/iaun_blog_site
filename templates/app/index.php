@@ -73,7 +73,7 @@
                         </div>
                     <?php  }
                 }
-                if (isset($parametrs['breaking_news'])){
+                if (isset($parametrs['breaking_news']) and $parametrs['breaking_news']!=false){
                 ?>
                 <div class="col-lg-12">
                     <div class="news-tracker-wrap">
@@ -112,9 +112,9 @@
                                         <li><a href="<?= url("home/date/".explode(" ",$latest_post['updated_at'])[0]) ?>"><?=toShamsi($latest_post['updated_at']) ?><span class="lnr lnr-calendar-full"></span></a></li>
                                         <li><a href="<?= url("home/post/".$latest_post['id']) ?>"><?=$latest_post['comment'] ?><span class="lnr lnr-bubble"></span></a></li>
                                     </ul>
-                                    <p class="excert">
+                                    <h6 class="excert">
                                         <?=$latest_post['summary'] ?>
-                                    </p>
+                                    </h6>
                                 </div>
                             </div>
                         <?php }
@@ -123,9 +123,9 @@
                     <!-- End latest-post Area -->
 
                     <!-- Start banner-ads Area -->
-                    <a href="<?= $parametrs['banners'][0]['url'] ?>">
+                    <a href="<?= $parametrs['banners'][1]['url'] ?>">
                         <div class="col-lg-12 ad-widget-wrap mt-30 mb-30">
-                            <img class="img-fluid" src="<?= $parametrs['banners'][0]['image'] ?>" alt="">
+                            <img class="img-fluid" src="<?= $parametrs['banners'][1]['image'] ?>" alt="">
                         </div>
                     </a>
                     <!-- End banner-ads Area -->
@@ -171,9 +171,9 @@
                                         <li><a href="<?= url("home/date/".explode(" ",$parametrs['popular_post'][1]['updated_at'])[0]) ?>"><?= toShamsi($parametrs['popular_post'][1]['updated_at']) ?><span class="lnr lnr-calendar-full"></span></a></li>
                                         <li><a href="<?= url("home/post/".$parametrs['popular_post'][1]['id']) ?>"><?= $parametrs['popular_post'][1]['comment'] ?><span class="lnr lnr-bubble"></span></a></li>
                                     </ul>
-                                    <p class="excert">
+                                    <h6 class="excert">
                                         <?= $parametrs['popular_post'][1]['summary'] ?>
-                                    </p>
+                                    </h6>
                                 </div>
                             </div>
                             <div class="col-lg-6 single-popular-post">
@@ -195,7 +195,7 @@
                                         <li><a href="<?= url("home/date/".explode(" ",$parametrs['popular_post'][2]['updated_at'])[0]) ?>"><?= toShamsi($parametrs['popular_post'][2]['updated_at']) ?><span class="lnr lnr-calendar-full"></span></a></li>
                                         <li><a href="<?= url("home/post/".$parametrs['popular_post'][2]['id']) ?>"><?= $parametrs['popular_post'][2]['comment'] ?><span class="lnr lnr-bubble"></span></a></li>
                                     </ul>
-                                    <p class="excert">
+                                    <h6 class="excert">
                                         <?= $parametrs['popular_post'][2]['summary'] ?>
                                 </div>
                             </div>

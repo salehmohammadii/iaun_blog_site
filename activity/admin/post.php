@@ -65,9 +65,7 @@ class post extends admin
         $this->showpage("posts/edit.php","Edit Post",$parametrs);
     }
     public function update($request,$id){
-        $request['published_at']=date("Y-m-d H-i-s",(int)substr($request['published_at'],0,10));
         $db=new database();
-
         if ($request['image']['name']){
             $imagePath=$db->select('select image from posts where id=?',[$id])->fetch()['image'];
             $this->deleteimage($imagePath);
