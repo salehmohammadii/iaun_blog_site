@@ -18,20 +18,8 @@
                     <input type="text" class="form-control" id="url" name="url" placeholder="Enter url ..." required>
                 </div>
 
-                <div class="form-group">
-                    <label for="parent_id">parent ID</label>
-                    <select name="parent_id" id="parent_id" class="form-control" autofocus>
-                        <option value="null">root</option>
-                        <?php foreach ($parametrs as $menue){ ?>
-                        <option value="<?= $menue['id'] ?>">
-                            <?= $menue['name'] ?>
-                        </option>
-                        <?php } ?>
 
-                    </select>
-                </div>
-
-                <button type="submit" class="btn btn-primary btn-sm">store</button>
+                <button type="submit" class="btn btn-primary btn-sm">ذخیره</button>
             </form>
         </section>
     </section>

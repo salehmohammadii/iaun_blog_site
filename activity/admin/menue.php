@@ -37,7 +37,6 @@ class menue extends admin
     }
     public function update($request,$id){
         $db=new database();
-
                 $db->update("menue",array_keys($request),$request,"id",$id);
         $this->redirect("admin/menue");
     }

@@ -221,6 +221,7 @@ uri("admin/menue","admin\menue","index");
 uri("admin/menue/create","admin\menue","create");
 uri("admin/menue/store","admin\menue","store","POST");
 uri("admin/menue/edit/{id}","admin\menue","edit");
+uri("admin/menue/update/{id}","admin\menue","update","POST");
 uri("auth/register",'auth\register',"index");
 uri("admin/menue/delete/{id}","admin\menue","delete");
 uri("admin/menue/change_selected/{id}","admin\menue","change_selected");
