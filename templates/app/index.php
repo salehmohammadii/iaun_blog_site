@@ -123,11 +123,17 @@
                     <!-- End latest-post Area -->
 
                     <!-- Start banner-ads Area -->
+                    <?php
+                    if (isset($parametrs['banners'][1]) and $parametrs['banners'][1]!=false){
+                    ?>
                     <a href="<?= $parametrs['banners'][1]['url'] ?>">
                         <div class="col-lg-12 ad-widget-wrap mt-30 mb-30">
                             <img class="img-fluid" src="<?= $parametrs['banners'][1]['image'] ?>" alt="">
                         </div>
                     </a>
+                    <?php
+                    }
+                    ?>
                     <!-- End banner-ads Area -->
                     <!-- Start popular-post Area -->
                     <div class="popular-post-wrap">

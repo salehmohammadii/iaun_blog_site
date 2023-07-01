@@ -7,7 +7,7 @@ define("base_path",__DIR__);
 define("current_domain",current_domain()."");
 define("desplay_error",true);
 define("db_host",'localhost');
-define("db_name","project(2)");
+define("db_name","project");
 define("db_username","root");
 define("db_password","");
 

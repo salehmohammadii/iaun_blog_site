@@ -71,13 +71,15 @@
                     </a>
                     <h3 class="h3 d-flex justify-content-center">سایت خبری</h3>
                 </div>
-
+                <?php
+                if (isset($parametrs['banners'][0]) and $parametrs['banners'][0]!=false){
+                      ?>
                     <div class="col-lg-8 col-md-8 col-sm-12 logo-right no-padding">
                         <a href="<?= $parametrs['banners'][0]['url'] ?>">
                         <img class="img-fluid"src="<?= assets($parametrs['banners'][0]['image']) ?>" alt="">
                         </a>
                     </div>
-
+<?php } ?>
             </div>
         </div>
     </div>

@@ -9,11 +9,15 @@
 
                     </div>
                 </div>
-                <div class="col-lg-12">
+                <?php
+                if (isset($parametrs['breaking_news']) and $parametrs['breaking_news']!=false){
+                ?>
+                    <div class="col-lg-12">
                     <div class="news-tracker-wrap">
                         <h6><span>خبر فوری</span> <a href="<?= url("home/post/".$parametrs['breaking_news']['id']) ?>"><?= $parametrs["breaking_news"]["title"] ?></a></h6>
                     </div>
                 </div>
+                <?php } ?>
             </div>
         </div>
     </section>
@@ -42,7 +46,7 @@
                                 </ul>
                             </div>
                             <div class="col-lg-7 post-right">
-                                <a href="image-post.html">
+                                <a href="<?= url('home/post/'.$post['id']) ?>">
                                     <h4><?= $post['title'] ?></h4>
                                 </a>
                                 <ul class="meta">
@@ -50,9 +54,9 @@
                                     <li><a href="<?= url("home/date/".explode(" ",$post['updated_at'])[0]) ?>"><?= toShamsi($post['updated_at']) ?><span class="lnr lnr-calendar-full"></span></a></li>
                                     <li><a href="#"> <?= $post['comment'] ?><span class="lnr lnr-bubble"></span></a></li>
                                 </ul>
-                                <p class="excert">
+                                <h6 class="excert">
                                     <?= $post['summary'] ?>
-                                </p>
+                                </h6>
                             </div>
                         </div>
 

@@ -29,11 +29,15 @@
                 </div>
             </div>
         <?php } ?>
+        <?php
+        if (isset($parametrs['banners'][2]) and $parametrs['banners'][2]!=false){
+        ?>
         <a href="<?= $parametrs['banners'][2]['url'] ?>">
             <div class="single-sidebar-widget ">
                 <img class="img-fluid" src="<?= assets($parametrs['banners'][2]['image']) ?>" alt="">
             </div>
         </a>
+        <?php } ?>
         <div class="single-sidebar-widget editors-pick-widget">
             <h6 class="title">پر بحث ترین ها</h6>
             <?php foreach ($parametrs['most_commented'] as $most_commented){  ?>
